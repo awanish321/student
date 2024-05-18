@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:student/create_password_screen.dart';
-import 'package:student/login_with_username_or_mobile.dart';
-import 'package:student/reset_password.dart';
-import 'package:student/student_login.dart';
-import 'package:student/verify_and_create_password.dart';
-import 'package:student/verify_login_otp.dart';
+
+import 'Home/View/Screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,59 +16,28 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Student',
       theme: ThemeData(
-        textTheme: GoogleFonts.nunitoSansTextTheme(),
+        // textTheme: GoogleFonts.nunitoSansTextTheme(),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontFamily: 'Lexend'),
+          bodyMedium: TextStyle(fontFamily: 'Lexend'),
+          bodySmall: TextStyle(fontFamily: 'Lexend'),
+          displayLarge: TextStyle(fontFamily: 'Lexend'),
+          displayMedium: TextStyle(fontFamily: 'Lexend'),
+          displaySmall: TextStyle(fontFamily: 'Lexend'),
+          titleSmall: TextStyle(fontFamily: 'Lexend'),
+          titleMedium: TextStyle(fontFamily: 'Lexend'),
+          titleLarge: TextStyle(fontFamily: 'Lexend'),
+          labelLarge: TextStyle(fontFamily: 'Lexend'),
+          labelMedium: TextStyle(fontFamily: 'Lexend'),
+          labelSmall: TextStyle(fontFamily: 'Lexend'),
+          headlineLarge: TextStyle(fontFamily: 'Lexend'),
+          headlineMedium: TextStyle(fontFamily: 'Lexend'),
+          headlineSmall: TextStyle(fontFamily: 'Lexend'),
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: false,
       ),
-      home: const StudentLoginScreen(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      home: const SplashScreen(),
     );
   }
 }
