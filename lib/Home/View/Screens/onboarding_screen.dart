@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:student/Home/View/Screens/professional/login_as_professionals_screen.dart';
 import 'package:student/Home/View/Screens/student_login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -64,27 +65,32 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(5)
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // Image.asset("assets/icons/user-graduate 1 (1).png"),
-                              SvgPicture.asset("assets/svg/briefcase.svg", height: 26, color: Colors.blue,),
-                              const SizedBox(width: 16,),
-                              const Text("Professionals", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
-                            ],
-                          ),
-                          const SizedBox(height: 4,),
-                          const Text("Working Professionals", style: TextStyle(color: Colors.grey),)
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginAsProfessionalsScreen()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(5)
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                // Image.asset("assets/icons/user-graduate 1 (1).png"),
+                                SvgPicture.asset("assets/svg/briefcase.svg", height: 26, color: Colors.blue,),
+                                const SizedBox(width: 16,),
+                                const Text("Professionals", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                              ],
+                            ),
+                            const SizedBox(height: 4,),
+                            const Text("Working Professionals", style: TextStyle(color: Colors.grey),)
+                          ],
+                        ),
                       ),
                     ),
                   ),

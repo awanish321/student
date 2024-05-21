@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:student/Home/View/Screens/create_student_account.dart';
 import 'package:student/Home/View/Screens/reset_password_screen.dart';
 
 import '../widgets/bottom_navigation_bar_widget.dart';
@@ -241,7 +242,9 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                             borderRadius: BorderRadius.circular(10)),
 
                       ),
-                      onPressed: (){}, child: const Text("Create an account", style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateStudentAccount()));
+                        }, child: const Text("Create an account", style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),)),
                 ),
                 const SizedBox(height: 10,)
               ],

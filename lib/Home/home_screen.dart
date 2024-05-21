@@ -76,6 +76,15 @@ final List<Map<String, dynamic>> dummyUsers = [
     'questionText':
         '-- For testing purpose I need to insert larger number (over 500 million) of dummy records into database table quickly in no time. It must happen instantly.',
     'answers':'720 answers suggested'
+  },
+  {
+    'image' : 'assets/images/review_profile_image_3.jpeg',
+    'name' : 'Ravi Shankar Pandey',
+    'followers' : '500k',
+    'time':'24h',
+    'questionTitle': '#How to insert larger number(over 1000 million) of dummy records into the database table quickly and more efficiently?',
+    'questionText' : '---For testing purpose I need to insert larger number over 1000 million of dummy records into database table quickly.',
+    'answers' : '1000 answers suggested'
   }
 ];
 

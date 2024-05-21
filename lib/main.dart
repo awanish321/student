@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           headlineMedium: TextStyle(fontFamily: 'Lexend'),
           headlineSmall: TextStyle(fontFamily: 'Lexend'),
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: false,
       ),
       home: const SplashScreen(),

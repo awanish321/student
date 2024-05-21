@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:student/Home/View/Screens/create_student_account.dart';
 import 'package:student/Home/View/Screens/verify_login_otp_screen.dart';
 
 class LoginWithOTPScreen extends StatefulWidget {
@@ -172,7 +173,9 @@ class _LoginWithOTPScreenState extends State<LoginWithOTPScreen> {
                             borderRadius: BorderRadius.circular(10)),
 
                       ),
-                      onPressed: (){}, child: const Text("Create an account", style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateStudentAccount()));
+                      }, child: const Text("Create an account", style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),)),
                 ),
 
                 const SizedBox(height: 20,)
