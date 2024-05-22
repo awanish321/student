@@ -108,7 +108,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
               PaymentMethodCard(
                 index: 3,
                 title: "Using UPI ID",
-                svgAsset: "assets/svg/upi-logo.svg",
+                svgAsset: "assets/svg/UPI-Logo-vector.svg",
                 isSelected: _selectedPaymentMethod == 3,
                 onTap: () {
                   setState(() {
@@ -214,9 +214,9 @@ class PaymentMethodCard extends StatelessWidget {
                 flex: 1,
                 child: SvgPicture.asset(
                   svgAsset,
-                  height: 50,
+                  height: 40,
                   fit: BoxFit.contain,
-                  width: 50,
+                  width: 40,
                 ),
               ),
               const SizedBox(width: 10),
