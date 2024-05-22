@@ -8,7 +8,7 @@ import 'package:student/Home/View/Screens/reset_password_screen.dart';
 import 'package:student/Home/View/widgets/bottom_navigation_bar_widget.dart';
 import 'package:student/Home/home_screen.dart';
 
-import '../create_student_account.dart';
+import '../students/create_student_account.dart';
 
 
 class LoginAsProfessionalsScreen extends StatefulWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:student/Home/View/Screens/create_student_account.dart';
+import 'package:student/Home/View/Screens/students/create_student_account.dart';
 import 'package:student/Home/View/Screens/reset_password_screen.dart';
 
-import '../widgets/bottom_navigation_bar_widget.dart';
+import '../../widgets/bottom_navigation_bar_widget.dart';
 import 'student_login_with_username_or_mobile.dart';
 
 class StudentLoginScreen extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:student/Home/View/Screens/professional/payments_screen.dart';
-import 'package:student/Home/View/Screens/verify_and_create_password_screen.dart';
+import 'package:student/Home/View/Screens/students/verify_and_create_password_screen.dart';
 
 class ProfessionalOTPVerificationScreen extends StatefulWidget {
   const ProfessionalOTPVerificationScreen({super.key});

@@ -189,7 +189,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:student/Home/View/Screens/student_login_screen.dart';
+import 'package:student/Home/View/Screens/students/student_login_screen.dart';
 import 'package:student/Home/View/widgets/bottom_navigation_bar_widget.dart';
 
 class CreateStudentAccount extends StatefulWidget {

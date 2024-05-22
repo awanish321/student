@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:student/Home/View/Screens/create_student_account.dart';
-import 'package:student/Home/View/Screens/student_login_screen.dart';
-import 'package:student/Home/View/Screens/verify_login_otp_screen.dart';
+import 'package:student/Home/View/Screens/students/create_student_account.dart';
+import 'package:student/Home/View/Screens/students/student_login_screen.dart';
+import 'package:student/Home/View/Screens/students/verify_login_otp_screen.dart';
 
 class LoginWithOTPScreen extends StatefulWidget {
   const LoginWithOTPScreen({super.key});

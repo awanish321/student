@@ -54,7 +54,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                   )),
 
               Center(
-                child: Image.asset("assets/signup.png"),
+                child: Image.asset("assets/otp.png"),
               ),
 
               const Text(

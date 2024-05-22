@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:student/Home/View/Screens/professional/login_as_professionals_screen.dart';
-import 'package:student/Home/View/Screens/student_login_screen.dart';
+import 'package:student/Home/View/Screens/students/student_login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

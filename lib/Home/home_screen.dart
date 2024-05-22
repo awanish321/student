@@ -4,7 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:share/share.dart';
 import 'package:student/Home/View/Screens/profile_screen.dart';
 
-import 'View/Screens/student_login_screen.dart';
+import 'View/Screens/students/student_login_screen.dart';
 import 'View/widgets/notification_screen.dart';
 
 final List<Map<String, dynamic>> dummyUsers = [
@@ -114,6 +114,7 @@ class UserWidget extends StatelessWidget {
                 Row(
                   children: [
                     CircleAvatar(
+                      backgroundColor: Colors.grey.withOpacity(0.2),
                       radius: 30,
                       backgroundImage: AssetImage(userData['image'] ?? ""),
                     ),
@@ -410,15 +411,15 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationsScreen()));
             },
-            child: Image.asset(
-              "assets/icons/Group 238.png",
-              height: 50,
-              width: 50,
-            ),
-            // child: Padding(
-            //   padding: const EdgeInsets.only(right: 20),
-            //   child: SvgPicture.asset("assets/svg/notification.svg", height: 30,),
+            // child: Image.asset(
+            //   "assets/svg/bell.svg",
+            //   height: 50,
+            //   width: 50,
             // ),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: SvgPicture.asset("assets/svg/bell.svg", height: 30,),
+            ),
           )
         ],
       ),
