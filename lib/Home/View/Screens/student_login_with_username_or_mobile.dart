@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:student/Home/View/Screens/create_student_account.dart';
+import 'package:student/Home/View/Screens/student_login_screen.dart';
 import 'package:student/Home/View/Screens/verify_login_otp_screen.dart';
 
 class LoginWithOTPScreen extends StatefulWidget {
@@ -126,7 +127,9 @@ class _LoginWithOTPScreenState extends State<LoginWithOTPScreen> {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => const OTPVerificationPage()));
                       }, child: const Text("Send OTP", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
                 ),
-                Center(child: TextButton(onPressed: (){}, child: const Text("Login with Password", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),))),
+                Center(child: TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const StudentLoginScreen()));
+                }, child: const Text("Login with Password", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),))),
                 const SizedBox(height: 16,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

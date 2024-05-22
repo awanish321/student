@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:student/Home/View/Screens/create_student_account.dart';
-import 'package:student/Home/View/Screens/reset_password_screen.dart';
+import 'package:student/Home/View/Screens/professional/create_professional_account.dart';
+import 'package:student/Home/View/Screens/professional/login_as_professionals_screen.dart';
+import 'package:student/Home/View/Screens/professional/verify_otp.dart';
 
-import '../widgets/bottom_navigation_bar_widget.dart';
-import 'student_login_with_username_or_mobile.dart';
 
-class StudentLoginScreen extends StatefulWidget {
-  const StudentLoginScreen({super.key});
+class LoginWithUsernameMobile extends StatefulWidget {
+  const LoginWithUsernameMobile ({super.key});
 
   @override
-  State<StudentLoginScreen> createState() => _StudentLoginScreenState();
+  State<LoginWithUsernameMobile> createState() => _State();
 }
 
-class _StudentLoginScreenState extends State<StudentLoginScreen> {
-  final username = TextEditingController();
-  final email = TextEditingController();
-  GlobalKey<FormState> studentFormKey = GlobalKey<FormState>();
-
+class _State extends State<LoginWithUsernameMobile> {
   @override
   Widget build(BuildContext context) {
+    final username = TextEditingController();
+    final email = TextEditingController();
+    GlobalKey<FormState> studentFormKey = GlobalKey<FormState>();
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -45,30 +44,29 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                           color: Colors.grey.withOpacity(0.2)),
                       child: const Center(
                           child: Icon(
-                        Icons.arrow_back_ios_sharp,
-                        size: 25,
-                        color: Colors.blue,
-                      ))),
+                            Icons.arrow_back_ios_sharp,
+                            size: 25,
+                            color: Colors.blue,
+                          ))),
                 ),
 
                 // Logo Icon
                 Center(
                     child: SvgPicture.asset(
-                  "assets/logoipsum-297.svg",
-                  height: 30,
-                  width: 30,
-                )),
+                      "assets/logoipsum-297.svg",
+                      height: 30,
+                      width: 30,
+                    )),
 
                 // Image
                 Center(
-                    child: Image.asset(
-                  "assets/student_login.png",
-                )),
-                // SvgPicture.asset("assets/student_login.svg",),
+                  // child: SvgPicture.asset("assets/otp.svg")
+                  child: Image.asset("assets/student_login.png"),
+                ),
 
                 // Text
                 const Text(
-                  "Login as Student",
+                  "Login as Professional",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
 
@@ -82,14 +80,14 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                         controller: username,
                         decoration: InputDecoration(
                           prefixIcon: const Icon(
-                            Iconsax.profile_circle,
+                            Iconsax.sms,
                             color: Colors.grey,
                           ),
-                          labelText: 'username',
+                          labelText: 'username/mobile',
                           labelStyle: const TextStyle(color: Colors.grey),
                           border: OutlineInputBorder(
                             borderSide:
-                                const BorderSide(color: Colors.cyanAccent),
+                            const BorderSide(color: Colors.cyanAccent),
                             borderRadius: BorderRadius.circular(25),
                           ),
                           enabledBorder: OutlineInputBorder(
@@ -100,7 +98,7 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide:
-                                BorderSide(color: Colors.grey.withOpacity(0.5)),
+                            BorderSide(color: Colors.grey.withOpacity(0.5)),
                             borderRadius: BorderRadius.circular(15),
                           ),
                         ),
@@ -111,76 +109,10 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                           return null;
                         },
                       ),
-                      const SizedBox(height: 16),
-                      TextFormField(
-                        controller: email,
-                        decoration: InputDecoration(
-                          prefixIcon: const Icon(
-                            Iconsax.lock_1,
-                            color: Colors.grey,
-                          ),
-                          labelText: 'password',
-                          labelStyle: const TextStyle(color: Colors.grey),
-                          border: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(color: Colors.cyanAccent),
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.grey.withOpacity(0.5),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.grey.withOpacity(0.5)),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Enter your password.';
-                          }
-                          return null;
-                        },
-                      ),
                     ],
                   ),
                 ),
 
-                // Forgot Password and Login With OTP Buttons
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const ResetPasswordScreen()));
-                        },
-                        child: const Text(
-                          'forgot password?',
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blue),
-                        )),
-                    TextButton(
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginWithOTPScreen()));
-                        },
-                        child: const Text(
-                          'Login with OTP',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.blue,
-                            decorationThickness: 5
-                          ),
-                        )),
-                  ],
-                ),
                 const SizedBox(height: 16,),
 
                 // Login Button
@@ -190,13 +122,17 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
                       ),
                       onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavBar()));
-                      }, child: const Text("Login", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
+                        // Navigator.push(context, MaterialPageRoute(builder: (context) => const OTPVerificationPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfessionalOTPVerificationScreen()));
+                      }, child: const Text("Send OTP", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
                 ),
-                const SizedBox(height: 10,),
+                Center(child: TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginAsProfessionalsScreen()));
+                }, child: const Text("Login with Password", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),))),
+                const SizedBox(height: 16,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -230,7 +166,7 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                     InkWell(child: Image.asset("assets/facebook.png", height: 40,))
                   ],
                 ),
-                const SizedBox(height: 16,),
+                const SizedBox(height: 32,),
                 const Center(child: Text("Don't have an account?")),
                 const SizedBox(height: 10,),
                 SizedBox(
@@ -244,10 +180,11 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
 
                       ),
                       onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateStudentAccount()));
-                        }, child: const Text("Create an account", style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),)),
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateProfessionalAccount()));
+                      }, child: const Text("Create an account", style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),)),
                 ),
-                const SizedBox(height: 10,)
+
+                const SizedBox(height: 20,)
               ],
             ),
           ),

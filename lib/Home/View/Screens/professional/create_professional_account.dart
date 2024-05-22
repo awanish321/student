@@ -225,7 +225,9 @@ class _CreateProfessionalAccountState extends State<CreateProfessionalAccount> {
                 height: 50,
                 width: double.infinity,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavBar()));
                   },
@@ -240,7 +242,7 @@ class _CreateProfessionalAccountState extends State<CreateProfessionalAccount> {
                   const Text("Have an account?"),
                   TextButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginAsProfessionalsScreen()));
-                  }, child: const Text("Login"))
+                  }, child: const Text("Login", style: TextStyle(color: Colors.blue),))
                 ],
               ),
 

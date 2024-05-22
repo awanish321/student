@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:student/Home/View/Screens/professional/create_professional_account.dart';
+import 'package:student/Home/View/Screens/professional/professional_login_with_username_mobile.dart';
 import 'package:student/Home/View/Screens/professional/verify_otp.dart';
 import 'package:student/Home/View/Screens/reset_password_screen.dart';
 import 'package:student/Home/View/widgets/bottom_navigation_bar_widget.dart';
@@ -63,7 +64,7 @@ class _LoginAsProfessionalsScreenState extends State<LoginAsProfessionalsScreen>
               // Image
               Center(
                   child: Image.asset(
-                    "assets/student_login.png",
+                    "assets/2002.i515 1.png",
                   )),
               
               const Text("Login as Professionals", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
@@ -148,10 +149,11 @@ class _LoginAsProfessionalsScreenState extends State<LoginAsProfessionalsScreen>
                 children: [
                   TextButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ResetPasswordScreen()));
-                  }, child: const Text("forgot password?",)),
+                  }, child: const Text("forgot password?",style: TextStyle(color: Colors.blue),)),
                   TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfessionalOTPVerificationScreen()));
-                  }, child: const Text("Login with OTP",)),
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfessionalOTPVerificationScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginWithUsernameMobile()));
+                  }, child: const Text("Login with OTP", style: TextStyle(color: Colors.blue),)),
                 ],
               ),
 
@@ -160,6 +162,7 @@ class _LoginAsProfessionalsScreenState extends State<LoginAsProfessionalsScreen>
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)
                     )
