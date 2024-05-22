@@ -61,7 +61,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
 
                 // Image
                 Center(
-                    child: Image.asset("assets/signup.png",)),
+                    child: Image.asset("assets/reset.png",)),
                 // Text
                 const Text(
                   "Create a New Password",
