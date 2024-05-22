@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:student/Home/View/Screens/create_student_account.dart';
 import 'package:student/Home/View/Screens/verify_login_otp_screen.dart';
 
@@ -77,7 +78,7 @@ class _LoginWithOTPScreenState extends State<LoginWithOTPScreen> {
                         controller: username,
                         decoration: InputDecoration(
                           prefixIcon: const Icon(
-                            Icons.mail_outline_rounded,
+                            Iconsax.sms,
                             color: Colors.grey,
                           ),
                           labelText: 'username/mobile',

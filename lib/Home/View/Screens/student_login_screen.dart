@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:student/Home/View/Screens/create_student_account.dart';
 import 'package:student/Home/View/Screens/reset_password_screen.dart';
 
@@ -81,7 +82,7 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                         controller: username,
                         decoration: InputDecoration(
                           prefixIcon: const Icon(
-                            Icons.mail_outline_rounded,
+                            Iconsax.profile_circle,
                             color: Colors.grey,
                           ),
                           labelText: 'username',
@@ -115,7 +116,7 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                         controller: email,
                         decoration: InputDecoration(
                           prefixIcon: const Icon(
-                            Icons.lock_outlined,
+                            Iconsax.lock_1,
                             color: Colors.grey,
                           ),
                           labelText: 'password',

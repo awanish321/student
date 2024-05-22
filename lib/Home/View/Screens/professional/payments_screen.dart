@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:student/Home/View/widgets/bottom_navigation_bar_widget.dart';
 
 class PaymentsScreen extends StatefulWidget {
   const PaymentsScreen({super.key});
@@ -152,7 +153,9 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                       borderRadius: BorderRadius.circular(15)
                     )
                   ),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavBar()));
+                  },
                   child: const Text("Pay 49 Rs. INR", style: TextStyle(fontWeight: FontWeight.bold),),
                 ),
               ),

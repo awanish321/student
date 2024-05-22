@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:student/Home/View/Screens/professional/create_professional_account.dart';
 import 'package:student/Home/View/Screens/professional/verify_otp.dart';
+import 'package:student/Home/View/Screens/reset_password_screen.dart';
 import 'package:student/Home/View/widgets/bottom_navigation_bar_widget.dart';
 import 'package:student/Home/home_screen.dart';
 
@@ -109,7 +110,7 @@ class _LoginAsProfessionalsScreenState extends State<LoginAsProfessionalsScreen>
                       controller: password,
                       decoration: InputDecoration(
                         prefixIcon: const Icon(
-                          Iconsax.lock,
+                          Iconsax.lock_1,
                           color: Colors.grey,
                         ),
                         labelText: 'password',
@@ -145,7 +146,9 @@ class _LoginAsProfessionalsScreenState extends State<LoginAsProfessionalsScreen>
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(onPressed: (){}, child: const Text("forgot password?",)),
+                  TextButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ResetPasswordScreen()));
+                  }, child: const Text("forgot password?",)),
                   TextButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfessionalOTPVerificationScreen()));
                   }, child: const Text("Login with OTP",)),

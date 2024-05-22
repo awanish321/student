@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:student/Home/View/Screens/student_login_screen.dart';
 
 class CreatePasswordScreen extends StatefulWidget {
   const CreatePasswordScreen({super.key});
@@ -100,7 +101,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                             BorderSide(color: Colors.grey.withOpacity(0.5)),
                             borderRadius: BorderRadius.circular(15),
                           ),
-                          prefixIcon: const Icon(Icons.lock_outline_rounded),
+                          prefixIcon: const Icon(Iconsax.lock_1),
                           suffixIcon: IconButton(
                             icon: Icon(
                               color: Colors.black,
@@ -146,7 +147,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                             BorderSide(color: Colors.grey.withOpacity(0.5)),
                             borderRadius: BorderRadius.circular(15),
                           ),
-                          prefixIcon: const Icon(Icons.lock_outline_rounded),
+                          prefixIcon: const Icon(Iconsax.lock_1),
                           suffixIcon: IconButton(
                             icon: Icon(
                               color: Colors.black,
@@ -186,7 +187,9 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                           backgroundColor: Colors.blue,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
                       ),
-                      onPressed: (){}, child: const Text("Change Password", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const StudentLoginScreen()));
+                      }, child: const Text("Change Password", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
                 ),
 
               ],

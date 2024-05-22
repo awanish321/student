@@ -189,6 +189,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:student/Home/View/Screens/student_login_screen.dart';
+import 'package:student/Home/View/widgets/bottom_navigation_bar_widget.dart';
 
 class CreateStudentAccount extends StatefulWidget {
   const CreateStudentAccount({super.key});
@@ -332,7 +334,7 @@ class _CreateStudentAccountState extends State<CreateStudentAccount> {
                       controller: password,
                       decoration: InputDecoration(
                         prefixIcon: const Icon(
-                          Iconsax.lock,
+                          Iconsax.lock_1,
                           color: Colors.grey,
                         ),
                         labelText: 'Create Password',
@@ -394,7 +396,9 @@ class _CreateStudentAccountState extends State<CreateStudentAccount> {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavBar()));
+                  },
                   child: const Text("Continue"),
                 ),
               ),
@@ -404,7 +408,9 @@ class _CreateStudentAccountState extends State<CreateStudentAccount> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text("Have an account?"),
-                  TextButton(onPressed: (){}, child: Text("Login"))
+                  TextButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const StudentLoginScreen()));
+                  }, child: const Text("Login"))
                 ],
               ),
 

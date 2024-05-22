@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:student/Home/View/Screens/onboarding_screen.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});
@@ -79,7 +81,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         controller: username,
                         decoration: InputDecoration(
                           prefixIcon: const Icon(
-                            Icons.mail_outline_rounded,
+                            Iconsax.sms,
                             color: Colors.grey,
                           ),
                           labelText: 'username/mobile',
@@ -108,9 +110,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           return null;
                         },
                       ),
-
-
-
                     ],
                   ),
                 ),
@@ -126,7 +125,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           backgroundColor: Colors.blue,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
                       ),
-                      onPressed: (){}, child: const Text("Continue", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const OnboardingScreen()));
+                      }, child: const Text("Continue", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
                 ),
 
               ],

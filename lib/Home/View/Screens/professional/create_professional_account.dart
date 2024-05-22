@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
+import 'package:student/Home/View/Screens/professional/login_as_professionals_screen.dart';
+import 'package:student/Home/View/widgets/bottom_navigation_bar_widget.dart';
 
 class CreateProfessionalAccount extends StatefulWidget {
   const CreateProfessionalAccount({super.key});
@@ -162,7 +164,7 @@ class _CreateProfessionalAccountState extends State<CreateProfessionalAccount> {
                       controller: password,
                       decoration: InputDecoration(
                         prefixIcon: const Icon(
-                          Iconsax.lock,
+                          Iconsax.lock_1,
                           color: Colors.grey,
                         ),
                         labelText: 'Create Password',
@@ -224,7 +226,9 @@ class _CreateProfessionalAccountState extends State<CreateProfessionalAccount> {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavBar()));
+                  },
                   child: const Text("Continue"),
                 ),
               ),
@@ -234,7 +238,9 @@ class _CreateProfessionalAccountState extends State<CreateProfessionalAccount> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text("Have an account?"),
-                  TextButton(onPressed: (){}, child: Text("Login"))
+                  TextButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginAsProfessionalsScreen()));
+                  }, child: const Text("Login"))
                 ],
               ),
 

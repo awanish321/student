@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:share/share.dart';
+import 'package:student/Home/View/Screens/ptofile_screen.dart';
 
 import 'View/Screens/student_login_screen.dart';
 import 'View/widgets/notification_screen.dart';
@@ -310,7 +311,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     backgroundColor: Colors.blue
                                 ),
-                                onPressed: (){},
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
+                                },
                                 child: const Text(
                                   "Setup Your Profile",
                                   style: TextStyle(
