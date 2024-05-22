@@ -111,7 +111,7 @@ class _StudentLoginScreenState extends State<StudentLoginScreen> {
                           return null;
                         },
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 10),
                       TextFormField(
                         controller: email,
                         decoration: InputDecoration(

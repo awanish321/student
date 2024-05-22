@@ -123,7 +123,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                           return null;
                         },
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       TextFormField(
                         controller: confirmPassword,
                         obscureText: _obscureText1,

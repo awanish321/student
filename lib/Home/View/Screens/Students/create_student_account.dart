@@ -295,7 +295,7 @@ class _CreateStudentAccountState extends State<CreateStudentAccount> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 10),
                     TextFormField(
                       controller: email,
                       decoration: InputDecoration(
@@ -329,7 +329,7 @@ class _CreateStudentAccountState extends State<CreateStudentAccount> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 10),
                     TextFormField(
                       controller: password,
                       decoration: InputDecoration(

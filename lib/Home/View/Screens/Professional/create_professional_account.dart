@@ -125,7 +125,7 @@ class _CreateProfessionalAccountState extends State<CreateProfessionalAccount> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 10),
                     TextFormField(
                       controller: email,
                       decoration: InputDecoration(
@@ -159,7 +159,7 @@ class _CreateProfessionalAccountState extends State<CreateProfessionalAccount> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 10),
                     TextFormField(
                       controller: password,
                       decoration: InputDecoration(

@@ -106,7 +106,7 @@ class _LoginAsProfessionalsScreenState extends State<LoginAsProfessionalsScreen>
                         return null;
                       },
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 10),
                     TextFormField(
                       controller: password,
                       decoration: InputDecoration(
